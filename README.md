@@ -1,4 +1,5 @@
-# 📬 BullMQ Job Queue Microservice (Email, PDF & Webhooks)
+# Email Job Schedular
+
 
 [![npm version](https://img.shields.io/npm/v/@queuelabs/bullmq-utils)](https://www.npmjs.com/package/@queuelabs/bullmq-utils)
 [![downloads](https://img.shields.io/npm/dm/@queuelabs/bullmq-utils)](https://www.npmjs.com/package/@queuelabs/bullmq-utils)
@@ -6,7 +7,7 @@
 ![node](https://img.shields.io/badge/node-%3E%3D18-green.svg)
 
 A **production-ready Node.js microservice** for background job processing using **BullMQ**, **Redis**, and **Express**.  
-Supports **Email**, **PDF generation**, and **Webhook jobs** with a built-in admin dashboard (Bull Board).  
+Specifically for  **Email Messaging Service**, **PDF generation**, and **Webhook jobs** 
 
 ---
 
@@ -263,8 +264,9 @@ npx ts-node src/workers/webhookWorker.ts
 ## 📂 Project Structure
 
 ```bash
-job-queue-service/
-├── src/
+
+Email-Job-Scheduler
+├── newfolder/
 │   ├── queues/        # Job queue definitions (e.g., emailQueue.ts)
 │   ├── workers/       # Job processors (email, pdf, webhook, etc.)
 │   ├── routes/        # Express API routes
@@ -287,19 +289,16 @@ job-queue-service/
 curl -X POST http://localhost:3000/api/email   -H "Content-Type: application/json"   -d '{
     "to": "user@example.com",
     "subject": "Hello",
-    "body": "Welcome to BullMQ Jobs 🚀"
+    "body": "Welcome to Email Job Schedular🚀"
   }'
 ```
 
-### Monitor Jobs
-
-Visit 👉 [http://localhost:3000/admin/queues](http://localhost:3000/admin/queues) to see Bull Board in action.  
 
 ---
 
 ## 🤔 Why Use This?
 
-- ✅ Preconfigured **BullMQ setup** → save hours of boilerplate work  
+- ✅ Preconfigured **Email Job Schedular** → save hours of boilerplate work  
 - ✅ Built-in workers for **Email, PDF, Webhooks**  
 - ✅ Plug & play with any Node.js service  
 - ✅ Scalable & production-ready (Redis + Docker)  
